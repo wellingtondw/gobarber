@@ -13,7 +13,7 @@ class CreateAppointmentService {
     const formatedDate = startOfHour(date);
     const appointmentsRepository = getCustomRepository(AppointmentsRepository);
 
-    const findAppointmentInSameDate = appointmentsRepository.findByDate(
+    const findAppointmentInSameDate = await appointmentsRepository.findByDate(
       formatedDate,
     );
 
