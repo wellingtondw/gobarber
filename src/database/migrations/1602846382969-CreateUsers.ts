@@ -25,7 +25,6 @@ export default class CreateUsers1602846382969 implements MigrationInterface {
           {
             name: 'password',
             type: 'varchar',
-            generationStrategy: 'uuid',
           },
           {
             name: 'created_at',
