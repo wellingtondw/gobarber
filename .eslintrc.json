@@ -20,6 +20,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "class-methods-use-this": "off",
     "camelcase": "off",
     "prettier/prettier": "error",
