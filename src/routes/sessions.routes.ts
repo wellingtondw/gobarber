@@ -9,11 +9,11 @@ usersRouter.post('/', async (request, response) => {
 
     const authUserService = new AuthenticateUserService();
 
-    const { user } = await authUserService.execute({ email, password });
+    const { user, token } = await authUserService.execute({ email, password });
 
     delete user.password;
 
-    return response.json({ user });
+    return response.json({ user, token });
   } catch (err) {
     return response.status(400).json({ message: err.message });
   }
